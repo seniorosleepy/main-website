@@ -1,19 +1,18 @@
-let name = prompt("Введите ваше имя");
-let amount = prompt("Введите сумму покупки");
-amount = Number(amount);
+let weekDay = prompt(" Enter the day of the week!")
 
-let finalPrice;
-
-if (isNaN(amount)){
-    alert("Ошибка: введите сумму числом!");
-} else{
-    if (amount < 1000){
-        alert(name + ", к сожалению скидки нет ")
-    } else if (amount >=1000 && amount <=5000){
-        finalPrice = amount * 0.9;
-        alert(name + ", ваша скидка 10%. Итоговая сумма: "+ finalPrice)
-    }   else {
-        finalPrice = amount * 0.8;
-        alert(name + ", ваша скидка 20%. Итоговая сумма: "+ finalPrice)
-    }
+switch (weekDay) {
+    case "monday":
+        alert("It's beginning of the week");
+        break;
+    case "friday":
+        alert("Yea, the weekend is cooming soon");
+        break;
+    case "saturday":
+    case "sunday":
+        alert("It's weekend, finally")
+        break
+    default:
+        alert("It's a normal day ")
 }
+
+//my first exercise with the switch construction
